@@ -1,0 +1,50 @@
+//Main font, grabbed from Google Fonts
+$main-font: "Poppins", sans-serif;
+
+//Website colors
+$primary-color: #fff;
+$secondary-color: #777777;
+
+//Mixins for flex displays and stuff
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-col-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-col-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//Mixin for transitions
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}

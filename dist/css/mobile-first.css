@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*-----------------------------------
+  -----------------------------------
+  -----------------------------------
+
+    Project Name:  Hielo redesign 
+    Project Start Date: 10.07.2019
+    Project End Date: ?.07.2019
+    Author: Berk Açıkgöz
+
+    TABLE OF CONTENTS:
+    
+    - Global Reset
+    - Header
+    - Landing
+    - 
+
+-----------------------------------
+-----------------------------------
+-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#main-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: #050505;
+  padding-top: 10px; }
+  #main-header #logo {
+    text-decoration: none;
+    margin: 15px;
+    color: #919191; }
+    #main-header #logo span {
+      font-size: 19px;
+      color: #fff;
+      transition: all 0.3s ease-out; }
+    #main-header #logo:hover span {
+      color: #919191;
+      transition: all 0.3s ease-out; }
+  #main-header #navbar {
+    margin: 15px 15px 15px auto; }
+    #main-header #navbar .navbar-toggler {
+      border: 1px solid black;
+      color: #fff;
+      cursor: pointer; }
+      #main-header #navbar .navbar-toggler i {
+        font-size: 15px;
+        margin-right: 5px; }
+    #main-header #navbar #navbar-menu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #050505;
+      list-style: none;
+      top: 0;
+      right: 0;
+      transform: translateX(300px);
+      height: 100vh;
+      width: 300px; }
+      #main-header #navbar #navbar-menu.active {
+        transform: translateX(0);
+        transition: all 0.3s ease-out; }
+      #main-header #navbar #navbar-menu .navbar-item {
+        width: 85%; }
+        #main-header #navbar #navbar-menu .navbar-item .navbar-link {
+          display: block;
+          color: #8b8b8b;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: -0.5px;
+          padding: 13px 0px; }
+        #main-header #navbar #navbar-menu .navbar-item :nth-child(1),
+        #main-header #navbar #navbar-menu .navbar-item .navbar-link {
+          transition: all 0.3s ease-out; }
+        #main-header #navbar #navbar-menu .navbar-item:nth-child(1) {
+          color: #777777;
+          align-self: flex-end;
+          font-size: 18px;
+          margin: 20px;
+          cursor: pointer;
+          width: auto; }
+        #main-header #navbar #navbar-menu .navbar-item:nth-child(3) {
+          border-bottom: 1px solid #373737;
+          border-top: 1px solid #373737; }
+        #main-header #navbar #navbar-menu .navbar-item:hover a,
+        #main-header #navbar #navbar-menu .navbar-item:hover i {
+          transition: all 0.3s ease-out;
+          color: #fff; }

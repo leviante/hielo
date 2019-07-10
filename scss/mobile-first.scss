@@ -1,0 +1,131 @@
+/*-----------------------------------
+  -----------------------------------
+  -----------------------------------
+
+    Project Name:  Hielo redesign 
+    Project Start Date: 10.07.2019
+    Project End Date: ?.07.2019
+    Author: Berk Açıkgöz
+
+    TABLE OF CONTENTS:
+    
+    - Global Reset
+    - Header
+    - Landing
+    - 
+
+-----------------------------------
+-----------------------------------
+-----------------------------------*/
+
+@import "config";
+
+// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Header
+#main-header {
+  @include flex-align-center;
+  position: relative;
+  font-family: $main-font;
+  background-color: #050505;
+  padding-top: 10px;
+
+  #logo {
+    text-decoration: none;
+    margin: 15px;
+    color: lighten($secondary-color, 10);
+
+    span {
+      font-size: 19px;
+      color: $primary-color;
+      @include easeOut;
+    }
+
+    &:hover {
+      span {
+        color: lighten($secondary-color, 10);
+        @include easeOut;
+      }
+    }
+  }
+
+  #navbar {
+    margin: 15px 15px 15px auto;
+
+    .navbar-toggler {
+      border: 1px solid black;
+      color: $primary-color;
+      cursor: pointer;
+      i {
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    }
+
+    #navbar-menu {
+      position: absolute;
+      @include flex-col-align-center;
+      background-color: #050505;
+      list-style: none;
+      top: 0;
+      right: 0;
+      transform: translateX(300px);
+      height: 100vh;
+      width: 300px;
+
+      //add active class that makes translateX 0 and include easeOut
+
+      &.active {
+        transform: translateX(0);
+        @include easeOut;
+      }
+
+      .navbar-item {
+        width: 85%;
+
+        .navbar-link {
+          display: block;
+          color: lighten($secondary-color, 8);
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: -0.5px;
+          padding: 13px 0px;
+        }
+
+        :nth-child(1),
+        .navbar-link {
+          @include easeOut;
+        }
+
+        &:nth-child(1) {
+          color: #777777;
+          align-self: flex-end;
+          font-size: 18px;
+          margin: 20px;
+          cursor: pointer;
+          width: auto;
+        }
+
+        &:nth-child(3) {
+          border-bottom: 1px solid darken($secondary-color, 25);
+          border-top: 1px solid darken($secondary-color, 25);
+        }
+
+        &:hover {
+          a,
+          i {
+            @include easeOut;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "desktop";
