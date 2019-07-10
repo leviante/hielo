@@ -1,0 +1,22 @@
+{
+  "name": "hielo",
+  "version": "1.0.0",
+  "description": "a template redesign",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leviante/hielo.git"
+  },
+  "author": "Berk Açıkgöz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leviante/hielo/issues"
+  },
+  "homepage": "https://github.com/leviante/hielo#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
