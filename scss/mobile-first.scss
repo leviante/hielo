@@ -15,6 +15,7 @@
     - Learn More
     - Banner
     - Gallery
+    - Main Footer
 
 -----------------------------------
 -----------------------------------
@@ -367,7 +368,7 @@ body {
 #gallery {
   @include flex-col-align-center;
   background-color: $section-color;
-  padding-bottom: 60px;
+  padding-bottom: 55px;
 
   .banner-text h1 {
     color: #000;
@@ -386,6 +387,47 @@ body {
 
       .gallery-img img {
         width: 100%;
+      }
+    }
+  }
+}
+
+#main-footer {
+  @include flex-col-align-center;
+  background-color: #050505;
+  padding: 45px 0px 50px 0px;
+
+  .footer-text {
+    color: #a6a6a6;
+    font-family: $main-font;
+
+    .footer-links {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 40px;
+
+      a {
+        color: #a6a6a6;
+        text-decoration: none;
+        margin-right: 10px;
+        @include easeOut;
+
+        &:first-child {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          @include easeOut;
+          color: #fff;
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+
+      span {
+        color: #fff;
       }
     }
   }
