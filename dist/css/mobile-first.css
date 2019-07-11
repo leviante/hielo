@@ -259,7 +259,7 @@ body {
 #banner {
   position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background: url("../img/bg.jpg");
   background-position: center;
@@ -334,7 +334,7 @@ body {
     #main-footer .footer-text .footer-links {
       font-size: 30px;
       text-align: center;
-      margin-bottom: 40px; }
+      margin-bottom: 30px; }
       #main-footer .footer-text .footer-links a {
         color: #a6a6a6;
         text-decoration: none;
@@ -349,3 +349,85 @@ body {
       font-size: 14px; }
       #main-footer .footer-text p span {
         color: #fff; }
+
+@media screen and (min-width: 820px) {
+  #showcase .showcase-item .showcase-text h1 {
+    font-size: 100px; }
+  #banner {
+    height: 25vh; }
+  .banner-text hr {
+    max-width: 600px; }
+  #gallery {
+    padding-top: 20px; } }
+
+@media screen and (min-width: 980px) {
+  #showcase {
+    height: 80vh; }
+    #showcase .showcase-item:nth-child(1) {
+      background-attachment: fixed; }
+    #showcase .showcase-item:nth-child(2) {
+      background-attachment: fixed; }
+    #showcase .showcase-item:nth-child(3) {
+      background-attachment: fixed; }
+    #showcase .showcase-item:nth-child(4) {
+      background-attachment: fixed; }
+    #showcase .showcase-item:nth-child(5) {
+      background-attachment: fixed; }
+    #showcase .showcase-item .showcase-text hr {
+      width: 25%; }
+  #learn-more .cards-container {
+    display: flex;
+    justify-content: center; }
+    #learn-more .cards-container .card:first-child {
+      margin-right: 30px; }
+  #banner {
+    background-attachment: fixed; }
+  #gallery .gallery-container {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 1280px) {
+  #showcase {
+    height: 100vh; }
+    #showcase .showcase-item .showcase-text hr {
+      width: 25%; } }
+
+@media screen and (min-width: 1680px) {
+  #main-header {
+    font-size: 18px; }
+    #main-header #logo span {
+      font-size: 20px; }
+    #main-header #navbar .navbar-toggler i {
+      font-size: 20px; }
+  #showcase .showcase-item .showcase-text p {
+    font-size: 18px; }
+  #showcase .showcase-item .showcase-text hr {
+    width: 15%; }
+  #showcase .showcase-item .showcase-text h1 {
+    font-size: 120px; }
+  #showcase .showcase-toggler i {
+    font-size: 15px; }
+  #learn-more .cards-container .card .card-text p {
+    font-size: 18px; }
+    #learn-more .cards-container .card .card-text p:nth-child(1) {
+      font-size: 15px; }
+  #learn-more .cards-container .card .card-text hr {
+    width: 45%; }
+  #learn-more .cards-container .card .card-text h3 {
+    font-size: 32px; }
+  .banner-text p {
+    font-size: 13px; }
+  .banner-text hr {
+    width: 650px; }
+  .banner-text h1 {
+    font-size: 32px; }
+  #main-footer .footer-text .footer-links {
+    font-size: 34px; }
+    #main-footer .footer-text .footer-links a {
+      color: #a6a6a6;
+      text-decoration: none;
+      margin-right: 15px;
+      transition: all 0.3s ease-out; }
+      #main-footer .footer-text .footer-links a:first-child {
+        margin-left: 15px; }
+  #main-footer .footer-text p {
+    font-size: 16px; } }

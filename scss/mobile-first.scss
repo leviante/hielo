@@ -314,7 +314,7 @@ body {
 //Banner
 #banner {
   position: relative;
-  @include flex-col-align-center;
+  @include flex-center-all;
   background: url("../img/bg.jpg");
   background-position: center;
   background-attachment: scroll;
@@ -404,7 +404,7 @@ body {
     .footer-links {
       font-size: 30px;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
 
       a {
         color: #a6a6a6;
