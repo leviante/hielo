@@ -14,7 +14,8 @@
     - Header
     - Showcase
     - Learn More
-    -
+    - Banner
+    - 
 
 -----------------------------------
 -----------------------------------
@@ -253,3 +254,48 @@ body {
           #learn-more .cards-container .card .card-text a:hover {
             background-color: #e6e6e6;
             transition: all 0.3s ease-out; }
+
+#banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../img/bg.jpg");
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #banner:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1; }
+  #banner .banner-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: #a6a6a6;
+    margin: 50px 0px 30px 0px;
+    width: 80%;
+    z-index: 2; }
+    #banner .banner-text p {
+      font-weight: 300;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+      margin-bottom: 15px; }
+    #banner .banner-text hr {
+      width: 60%;
+      opacity: 0.4;
+      margin-bottom: 10px; }
+    #banner .banner-text h1 {
+      color: #fff;
+      font-weight: 300;
+      font-size: 28px; }
