@@ -3,7 +3,7 @@ $main-font: "Poppins", sans-serif;
 
 //Website colors
 $primary-color: #fff;
-$secondary-color: #777777;
+$secondary-color: lighten(#777777, 25);
 
 //Mixins for flex displays and stuff
 @mixin flex {

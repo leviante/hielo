@@ -12,7 +12,7 @@
     
     - Global Reset
     - Header
-    - Landing
+    - Showcase
     - 
 
 -----------------------------------
@@ -23,28 +23,32 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 #main-header {
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 10px;
+  width: 100%;
   font-family: "Poppins", sans-serif;
-  background-color: #050505;
-  padding-top: 10px; }
+  background-color: transparent;
+  z-index: 3; }
   #main-header #logo {
     text-decoration: none;
     margin: 15px;
-    color: #919191; }
+    color: #d0d0d0; }
     #main-header #logo span {
       font-size: 19px;
       color: #fff;
       transition: all 0.3s ease-out; }
     #main-header #logo:hover span {
-      color: #919191;
+      color: #d0d0d0;
       transition: all 0.3s ease-out; }
   #main-header #navbar {
     margin: 15px 15px 15px auto; }
     #main-header #navbar .navbar-toggler {
-      border: 1px solid black;
       color: #fff;
       cursor: pointer; }
       #main-header #navbar .navbar-toggler i {
@@ -57,11 +61,12 @@
       align-items: center;
       background-color: #050505;
       list-style: none;
-      top: 0;
+      top: -10px;
       right: 0;
       transform: translateX(300px);
       height: 100vh;
-      width: 300px; }
+      width: 300px;
+      z-index: 3; }
       #main-header #navbar #navbar-menu.active {
         transform: translateX(0);
         transition: all 0.3s ease-out; }
@@ -69,7 +74,7 @@
         width: 85%; }
         #main-header #navbar #navbar-menu .navbar-item .navbar-link {
           display: block;
-          color: #8b8b8b;
+          color: #cbcbcb;
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: -0.5px;
@@ -85,9 +90,108 @@
           cursor: pointer;
           width: auto; }
         #main-header #navbar #navbar-menu .navbar-item:nth-child(3) {
-          border-bottom: 1px solid #373737;
-          border-top: 1px solid #373737; }
+          border-bottom: 1px solid #777777;
+          border-top: 1px solid #777777; }
         #main-header #navbar #navbar-menu .navbar-item:hover a,
         #main-header #navbar #navbar-menu .navbar-item:hover i {
           transition: all 0.3s ease-out;
           color: #fff; }
+
+#showcase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50vh; }
+  #showcase .showcase-item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+    #showcase .showcase-item:nth-child(1) {
+      background: url(../img/slide01.jpg);
+      background-position: center center;
+      background-attachment: scroll;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #showcase .showcase-item:nth-child(2) {
+      background: url(../img/slide02.jpg);
+      background-position: center center;
+      background-attachment: scroll;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #showcase .showcase-item:nth-child(3) {
+      background: url(../img/slide03.jpg);
+      background-position: center center;
+      background-attachment: scroll;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #showcase .showcase-item:nth-child(4) {
+      background: url(../img/slide04.jpg);
+      background-position: center center;
+      background-attachment: scroll;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #showcase .showcase-item:nth-child(5) {
+      background: url(../img/slide05.jpg);
+      background-position: center center;
+      background-attachment: scroll;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #showcase .showcase-item.current {
+      opacity: 1; }
+    #showcase .showcase-item:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1; }
+    #showcase .showcase-item .showcase-text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      color: #b7b7b7;
+      z-index: 2;
+      width: 100%; }
+      #showcase .showcase-item .showcase-text p {
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 1.3rem;
+        width: 93%; }
+        #showcase .showcase-item .showcase-text p a {
+          color: #fff;
+          text-decoration: none; }
+      #showcase .showcase-item .showcase-text hr {
+        width: 40%;
+        border-color: #bfbfbf; }
+      #showcase .showcase-item .showcase-text h1 {
+        color: #fff;
+        font-size: 70px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 0.5rem; }
+  #showcase .showcase-toggler {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 2; }
+    #showcase .showcase-toggler i {
+      margin-right: 12px;
+      font-size: 12px;
+      color: rgba(220, 220, 220, 0.4); }
+      #showcase .showcase-toggler i:last-child {
+        margin-right: 0; }
+      #showcase .showcase-toggler i.current {
+        color: #fff; }
