@@ -13,7 +13,8 @@
     - Global Reset
     - Header
     - Showcase
-    - 
+    - Learn More
+    -
 
 -----------------------------------
 -----------------------------------
@@ -195,3 +196,60 @@ body {
         margin-right: 0; }
       #showcase .showcase-toggler i.current {
         color: #fff; }
+
+#learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 50px 0px 50px 0px; }
+  #learn-more .cards-container {
+    width: 90%; }
+    #learn-more .cards-container .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      margin-bottom: 30px; }
+      #learn-more .cards-container .card .card-img {
+        align-self: stretch;
+        margin-bottom: 25px; }
+        #learn-more .cards-container .card .card-img img {
+          width: 100%; }
+      #learn-more .cards-container .card .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: #a6a6a6;
+        width: 90%; }
+        #learn-more .cards-container .card .card-text p {
+          line-height: 1.7; }
+          #learn-more .cards-container .card .card-text p:nth-child(1) {
+            font-weight: 300;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 90%; }
+        #learn-more .cards-container .card .card-text hr {
+          width: 50%;
+          opacity: 0.4;
+          margin-bottom: 10px; }
+        #learn-more .cards-container .card .card-text h3 {
+          color: #000;
+          font-weight: 300;
+          font-size: 28px;
+          padding-bottom: 30px; }
+        #learn-more .cards-container .card .card-text a {
+          color: #000;
+          border: 1px solid #a6a6a6;
+          border-radius: 3px;
+          text-decoration: none;
+          padding: 10px 20px;
+          margin: 30px 0px;
+          transition: all 0.3s ease-out; }
+          #learn-more .cards-container .card .card-text a:hover {
+            background-color: #e6e6e6;
+            transition: all 0.3s ease-out; }

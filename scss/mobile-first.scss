@@ -12,7 +12,8 @@
     - Global Reset
     - Header
     - Showcase
-    - 
+    - Learn More
+    -
 
 -----------------------------------
 -----------------------------------
@@ -228,6 +229,81 @@ body {
 
       &.current {
         color: $primary-color;
+      }
+    }
+  }
+}
+
+//Learn More
+#learn-more {
+  @include flex-col-align-center;
+  background-color: $section-color;
+  padding: 50px 0px 50px 0px;
+
+  .cards-container {
+    width: 90%;
+
+    .card {
+      @include flex-col-align-center;
+      background-color: $primary-color;
+      margin-bottom: 30px;
+
+      .card-img {
+        align-self: stretch;
+        margin-bottom: 25px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .card-text {
+        @include flex-col-align-center;
+        font-family: $main-font;
+        color: #a6a6a6;
+        width: 90%;
+
+        p {
+          &:nth-child(1) {
+            font-weight: 300;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 90%;
+          }
+
+          line-height: 1.7;
+        }
+
+        hr {
+          width: 50%;
+          opacity: 0.4;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          color: #000;
+          font-weight: 300;
+          font-size: 28px;
+          padding-bottom: 30px;
+        }
+
+        a {
+          color: #000;
+          border: 1px solid #a6a6a6;
+          border-radius: 3px;
+          text-decoration: none;
+          padding: 10px 20px;
+          margin: 30px 0px;
+          @include easeOut;
+
+          &:hover {
+            background-color: lighten(#a6a6a6, 25);
+            @include easeOut;
+          }
+        }
       }
     }
   }
