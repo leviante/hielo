@@ -49,3 +49,7 @@ $section-color: #f2f2f2;
 @mixin easeOut {
   transition: all 0.3s ease-out;
 }
+
+@mixin showcaseToggle {
+  transition: opacity 1.5s ease;
+}
