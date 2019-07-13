@@ -38,3 +38,27 @@ const changeShowcase = index => {
   );
   targetShowcase.classList.add("current");
 };
+
+const nextShowcase = () => {
+  const oldShowcase = document.querySelector(".showcase-item.current");
+  oldShowcase.classList.remove("current");
+
+  const oldShowcaseToggler = document.querySelector(
+    ".showcase-toggler .current"
+  );
+  oldShowcaseToggler.classList.remove("current");
+
+  //check for next slide, if it's the end, add current to first
+  if (oldShowcase.nextElementSibling.classList.contains("showcase-toggler")) {
+    // Add current to first showcase and first toggler
+    const firstShowcase = document.querySelector(".showcase-item");
+    firstShowcase.classList.add("current");
+
+    const firstToggler = document.querySelector(".showcase-toggler .fas");
+    firstToggler.classList.add("current");
+  } else {
+    //Add current to next sibling
+    oldShowcase.nextElementSibling.classList.add("current");
+    oldShowcaseToggler.nextElementSibling.classList.add("current");
+  }
+};
