@@ -25,6 +25,10 @@ showcaseTogglers.forEach((toggler, index) =>
   toggler.addEventListener("click", e => {
     changeToggler(e);
     changeShowcase(index);
+    if (!auto) {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextShowcase, intervalTime);
+    }
   })
 );
 
@@ -37,3 +41,13 @@ window.addEventListener("scroll", () => {
     stickyHeader(isHeaderOpen);
   }
 });
+
+//Variables for auto slide showcase
+const auto = false;
+const intervalTime = 5000;
+let slideInterval;
+
+if (!auto) {
+  //run next slide at interval time
+  slideInterval = setInterval(nextShowcase, intervalTime);
+}
